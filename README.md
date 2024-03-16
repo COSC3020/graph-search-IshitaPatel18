@@ -27,6 +27,17 @@ the function and run automatically when you commit through a GitHub action.
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
+My answer:
+
+The worst case scenario would be if the targetNode does not exist, and the whole
+graph is searched to find out that there is no path from the startNode to the
+targetNode. The visitedNodes.push, will eventually add every single node onto the list
+so we will have checked every single vertex for |V| or number of vertices. Then because
+we are trying to find the path from startNode to the targetNode, the for loop and the 
+recursive call in it will search each directed edge that connects the nodes, to see if any
+edge leads to the targetNode, which would run for number of edges or |E| in the worst case.
+Now adding this together, our worst case $\Theta$ complexity would be $\Theta(|E| + |V|)$.
+
 ## Bonus
 
 Implement and analyze breadth-first search.
